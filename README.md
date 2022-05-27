@@ -11,11 +11,13 @@ The goals of this live code are to:
 - Use `axios` to make API calls to update state
 - Write controlled form components
 
-## Wave 01: Components and Props
+## Wave 00: Components and Props
 
-## Wave 02:  Lifting State Up
+## Wave 01: State and Event Handling
 
-## Wave 03:  useEffect And Axios
+## Wave 02: Lifting State Up
+
+## Wave 04:  useEffect And Axios
 
 ### API EndPoints:
 
