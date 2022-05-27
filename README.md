@@ -17,7 +17,7 @@ The goals of this live code are to:
 
 ## Wave 02: Lifting State Up
 
-## Wave 04:  useEffect And Axios
+## Wave 03:  useEffect And Axios
 
 ### API EndPoints:
 
