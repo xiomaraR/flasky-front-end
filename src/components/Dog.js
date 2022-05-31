@@ -34,7 +34,7 @@ const Dog = (props) => {
 Dog.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  age: PropTypes.number.isRequired,
+  age: PropTypes.string.isRequired,
   breed: PropTypes.string.isRequired,
   chip: PropTypes.string.isRequired,
 };
