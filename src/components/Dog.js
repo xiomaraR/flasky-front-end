@@ -1,22 +1,18 @@
 import PropTypes from "prop-types";
 import "./Dog.css";
 
-const Dog = (props) => {
+const Dog = ({ id, name, chip, addChipCallback, deleteDogCallback }) => {
   return (
     <li>
       <h2>
-        {props.name}
-        <button onClick={() => props.deleteDogCallback(props.id)}>
-          delete
-        </button>
+        {name}
+        <button onClick={() => deleteDogCallback(id)}>delete</button>
       </h2>
 
-      {props.chip ? (
-        <span>Chip #: {props.chip}</span>
+      {chip ? (
+        <span>Chip #: {chip}</span>
       ) : (
-        <button onClick={() => props.addChipCallback(props.id)}>
-          add chip
-        </button>
+        <button onClick={() => addChipCallback(id)}>add chip</button>
       )}
     </li>
   );
