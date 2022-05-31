@@ -38,14 +38,14 @@ const App = () => {
   const addChip = (id) => {
     const newDogs = dogs.map((dog) => {
       if (dog.id === id) {
-        return {
-          ...dog,
-          chip: String(getRndInteger(1000, 9999)),
-        };
+        dog.chip = String(getRndInteger(1000, 9999));
+        axios
+          .patch(`${URL}/${id}/add_chip`)
+          .then(() => setDogs(newDogs))
+          .catch((error) => console.log(error));
       }
       return dog;
     });
-    setDogs(newDogs);
   };
 
   const deleteDog = (id) => {
