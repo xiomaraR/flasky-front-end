@@ -49,8 +49,15 @@ const App = () => {
   };
 
   const deleteDog = (id) => {
-    const newDogs = dogs.filter((dog) => dog.id !== id);
-    setDogs(newDogs);
+    axios
+      .delete(`${URL}/${id}`)
+      .then(() => {
+        const newDogs = dogs.filter((dog) => dog.id !== id);
+        setDogs(newDogs);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
