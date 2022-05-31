@@ -17,15 +17,17 @@ const DogList = (props) => {
       );
     });
   };
-  return <ul className="dogs__list no-bullet">{getDogListJSX(props.dogs)}</ul>;
+  return <ul className="dogs__list">{getDogListJSX(props.dogs)}</ul>;
 };
 
 DogList.propTypes = {
   dogs: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      text: PropTypes.string.isRequired,
-      done: PropTypes.bool.isRequired,
+      name: PropTypes.string.isRequired,
+      age: PropTypes.number.isRequired,
+      breed: PropTypes.string.isRequired,
+      chip: PropTypes.string.isRequired,
     })
   ).isRequired,
 };

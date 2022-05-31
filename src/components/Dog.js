@@ -4,10 +4,22 @@ import "./Dog.css";
 const Dog = (props) => {
   return (
     <li>
-      <span>props.name</span>
-      <button>{props.chip === "" ? "add chip" : "Chip #: {props.chip}"}</button>
+      <h2>{props.name}</h2>
+      {props.chip ? (
+        <span>Chip #: {props.chip}</span>
+      ) : (
+        <button>add chip</button>
+      )}
     </li>
   );
+};
+
+Dog.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
+  breed: PropTypes.string.isRequired,
+  chip: PropTypes.string.isRequired,
 };
 
 export default Dog;
