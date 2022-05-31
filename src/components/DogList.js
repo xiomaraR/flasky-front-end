@@ -13,6 +13,7 @@ const DogList = (props) => {
           breed={dog.breed}
           age={dog.age}
           chip={dog.chip}
+          addChipCallback={props.addChipCallback}
         />
       );
     });
@@ -25,11 +26,12 @@ DogList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
-      age: PropTypes.number.isRequired,
+      age: PropTypes.string.isRequired,
       breed: PropTypes.string.isRequired,
       chip: PropTypes.string.isRequired,
     })
   ).isRequired,
+  addChipCallback: PropTypes.func.isRequired,
 };
 
 export default DogList;
