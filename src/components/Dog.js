@@ -6,7 +6,9 @@ const Dog = (props) => {
     <li>
       <h2>
         {props.name}
-        <button className="delete__dog">delete</button>
+        <button onClick={() => props.deleteDogCallback(props.id)}>
+          delete
+        </button>
       </h2>
 
       {props.chip ? (
@@ -27,6 +29,7 @@ Dog.propTypes = {
   breed: PropTypes.string.isRequired,
   chip: PropTypes.string.isRequired,
   addChipCallback: PropTypes.func.isRequired,
+  deleteDogCallback: PropTypes.func.isRequired,
 };
 
 export default Dog;

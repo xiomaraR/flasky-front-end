@@ -29,6 +29,11 @@ const App = () => {
     setDogs(newDogs);
   };
 
+  const deleteDog = (id) => {
+    const newDogs = dogs.filter((dog) => dog.id !== id);
+    setDogs(newDogs);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -36,7 +41,11 @@ const App = () => {
       </header>
       <main>
         <div>
-          <DogList dogs={dogs} addChipCallback={addChip} />
+          <DogList
+            dogs={dogs}
+            addChipCallback={addChip}
+            deleteDogCallback={deleteDog}
+          />
         </div>
       </main>
     </div>
