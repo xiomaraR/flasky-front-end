@@ -25,7 +25,7 @@ DogList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
-      age: PropTypes.number.isRequired,
+      age: PropTypes.string.isRequired,
       breed: PropTypes.string.isRequired,
       chip: PropTypes.string.isRequired,
     })
