@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import DogList from './components/DogList';
+import NewDogForm from './components/NewDogForm';
 
 export const URL = 'https://ada-flasky.herokuapp.com/dogs';
 
@@ -60,6 +61,16 @@ const App = () => {
       });
   };
 
+  const addDog = (dogData) => {
+    axios
+      .post(URL, dogData)
+      .then((response) => {
+        const newDogs = [...dogs];
+        newDogs.push({ id: response.data.id, chip: '', ...dogData });
+        setDogs(newDogs);
+      })
+      .catch((error) => console.log(error));
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -67,6 +78,7 @@ const App = () => {
       </header>
       <main>
         <div>
+          <NewDogForm addDogCallback={addDog}></NewDogForm>
           <DogList
             dogs={dogs}
             addChipCallback={addChip}
