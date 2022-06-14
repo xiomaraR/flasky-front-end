@@ -4,9 +4,10 @@ import React from "react";
 const CatList = () => {
   return (
     <ul className="cat_list">
-      <Cat></Cat>
-      <Cat></Cat>
-      <Cat></Cat>
+      <h2>Cat Count: 3</h2>
+      <Cat />
+      <Cat />
+      <Cat />
     </ul>
   );
 };
