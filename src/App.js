@@ -16,6 +16,25 @@ const catData = [
     chipNumber: "02468",
   },
 ];
+
+const dogData = [
+  {
+    name: "Wishbone",
+    favoriteToy: "Squeaker",
+    chipNumber: "82373",
+  },
+  {
+    name: "Appa",
+    favoriteToy: "Ball",
+    chipNumber: "29238",
+  },
+  {
+    name: "Jimminy",
+    favoriteToy: "Bone",
+    chipNumber: "72902",
+  },
+];
+
 function App() {
   return (
     <main>
@@ -23,7 +42,7 @@ function App() {
       <CatList cats={catData} />
 
       <h1>The Dog Pen</h1>
-      <DogList></DogList>
+      <DogList dogs={dogData}></DogList>
     </main>
   );
 }
